@@ -36,11 +36,14 @@ class IntroPage extends StatelessWidget {
               style: TextStyle(
                   color: Theme.of(context).colorScheme.inversePrimary),
             ),
+            const SizedBox(height: 10),
 
             //button
             MyButton(
-              onTap: () {},
-              child:const Icon(Icons.arrow_forward),
+              onTap: () {
+                
+              },
+              child: const Icon(Icons.arrow_forward),
             ),
           ],
         ),
