@@ -1,11 +1,17 @@
+import 'package:ecommerce/models/shop.dart';
+import 'package:ecommerce/pages/cart_page.dart';
 import 'package:ecommerce/pages/intro_page.dart';
 import 'package:ecommerce/pages/shop_page.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import 'themes/light_mode.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => Shop(),
+    child: const MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
@@ -18,8 +24,9 @@ class MainApp extends StatelessWidget {
       home: const IntroPage(),
       theme: lightMode,
       routes: {
-        '/intro_page':(context)=>const IntroPage(),
-        '/shop_page':(context)=> const ShopPage(),
+        '/intro_page': (context) => const IntroPage(),
+        '/shop_page': (context) => const ShopPage(),
+        '/cart_page': (context) => const CartPage(),
       },
     );
   }
