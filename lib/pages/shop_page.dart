@@ -29,9 +29,6 @@ class ShopPage extends StatelessWidget {
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: ListView(
         children: [
-          //shop title
-          Text("shop"),
-
           //shop subtitle
           Center(
             child: Text(
@@ -48,7 +45,7 @@ class ShopPage extends StatelessWidget {
             child: ListView.builder(
               itemCount: products.length,
               scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               itemBuilder: (context, index) {
                 //get each individual product from shop
                 final product = products[index];

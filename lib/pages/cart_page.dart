@@ -41,7 +41,7 @@ class CartPage extends StatelessWidget {
   void payButtonPressed(BuildContext context) {
     showDialog(
       context: context,
-      builder: (context) => AlertDialog(
+      builder: (context) => const AlertDialog(
         content:
             Text("User wants to pay! connect this app to your payment backend"),
       ),
@@ -57,7 +57,7 @@ class CartPage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         foregroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Cart Page"),
+        title: const Text("Cart Page"),
       ),
       backgroundColor: Theme.of(context).colorScheme.surface,
       body: Column(
@@ -65,7 +65,7 @@ class CartPage extends StatelessWidget {
           //cart list
           Expanded(
             child: cart.isEmpty
-                ? Center(child: Text("Your cart is empty..."))
+                ? const Center(child: Text("Your cart is empty..."))
                 : ListView.builder(
                     itemCount: cart.length,
                     itemBuilder: (context, index) {

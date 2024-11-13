@@ -1,4 +1,3 @@
-import 'package:ecommerce/main.dart';
 import 'package:ecommerce/models/product.dart';
 import 'package:ecommerce/models/shop.dart';
 import 'package:flutter/material.dart';
@@ -65,9 +64,7 @@ class MyProductTile extends StatelessWidget {
                     ),
                     width: double.infinity,
                     padding: const EdgeInsets.all(25),
-                    child: const Icon(
-                      Icons.favorite,
-                    )),
+                    child: Image.asset(product.imagePath)),
               ),
 
               const SizedBox(
@@ -106,7 +103,7 @@ class MyProductTile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               //product price
-              Text('\$' + product.price.toStringAsFixed(2)),
+              Text('\Rs.${product.price.toStringAsFixed(2)}'),
 
               //add to cart button
               Container(
