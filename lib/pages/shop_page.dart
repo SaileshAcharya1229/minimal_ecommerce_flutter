@@ -48,7 +48,7 @@ class ShopPage extends StatelessWidget {
               padding: const EdgeInsets.all(15),
               itemBuilder: (context, index) {
                 //get each individual product from shop
-                //final product = products[index];
+                final product = products[index];
 
                 //return as a product tile UI
                 return MyProductTile(product: product);
